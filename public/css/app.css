@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /*background: #222;*/
+    background: url("/images/bg2.jpg");
+    background-size: cover;
+    font-size: 120%;
+}
+
+.card {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 60%;
+    /*max-width: 420px;*/
+    margin: 1em;
+
+}
+
+.mimg{
+    width: 150px;
+    height: 150px;
+}
+.search {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 42px);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    right: 1px; /* или любой другой отступ, который вам нужен */
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+.items{
+    display: grid;
+    /*grid-auto-flow: column;*/
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows:  1fr 1fr 1fr  ;
+    gap: 10px;
+    /*height: 100vh;*/
+
+}
+
+.item{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item1{
+    /*background-color: rgba(255, 255, 255, 0);*/
+    grid-column: span 1;
+    grid-row: span 4 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr 2fr;
+
+    justify-content: center; /* Добавьте это свойство */
+    align-items: center; /* Добавьте это свойство */
+
+
+    /*grid-row: 1 / span 4; !* Занимает две строки (всю высоту) *!*/
+}
+
+.search{
+    grid-column: span 2;
+}
+.mainBlock,.item4,.item5{
+    /*border: 1px solid cornflowerblue;*/
+    text-align: center ;
+
+}
+
+.feels,.precipitation,.visibility,.humidity{
+    border-radius: 10px;
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: rgba(128, 128, 128, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 10px;
+    height: min(90px);
+}
+
+.weather{
+    grid-column: span 2;
+    font-size: 150%;
+
+}
+
+.item2{
+    grid-column:  span 2;
+    /*grid-row: span 2 ;*/
+    display: grid;
+    grid-auto-flow: column;
+    overflow: scroll;
+    gap: 10px;
+
+}
+
+.item3{
+    grid-column:  span 2;
+    /*grid-row: span 3;*/
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    overflow: scroll;
+}
+
+.item2,.item3,.item4,.item5{
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.hour,.day{
+    padding-left: 30px; /* Отступ слева */
+    padding-right: 30px;
+    text-align: center;
+}
+
+
